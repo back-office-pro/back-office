@@ -1,0 +1,13 @@
+services:
+  web:
+    image: back-office.pro/back-office:latest-full
+    ports:
+      - 3000:3000
+    volumes:
+      - credentials:/back-office/config/credentials
+      - storage:/back-office/storage
+      - clamav:/var/lib/clamav
+volumes:
+  credentials:
+  storage:
+  clamav:

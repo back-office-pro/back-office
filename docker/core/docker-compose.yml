@@ -1,0 +1,30 @@
+services:
+  clamav:
+    image: clamav/clamav-debian:latest
+    ports:
+      - 3310:3310
+    volumes:
+      - clamav:/var/lib/clamav
+  chromium:
+    image: ghcr.io/browserless/chromium:latest
+    ports:
+      - 3333:3000
+    environment:
+      - PORT=3333
+  web:
+    image: back-office.pro/back-office:latest-core
+    ports:
+      - 3000:3000
+    volumes:
+      - credentials:/back-office/config/credentials
+      - storage:/back-office/storage
+    depends_on:
+      - clamav
+      - chromium
+    environment:
+      - CHROMIUM_URL=ws://chromium:3333
+      - CLAMAV_HOST=clamav
+volumes:
+  credentials:
+  storage:
+  clamav:
