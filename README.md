@@ -33,6 +33,8 @@ volumes:
   clamav:
 ```
 
+You can find more `docker-compose` files, with different image versions, [here](docker).
+
 Then issue the command to create the containers:
 
 ```shell
