@@ -1,3 +1,4 @@
+name: back-office
 services:
   web:
     image: back-office.pro/back-office:latest-full

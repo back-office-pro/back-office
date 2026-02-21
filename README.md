@@ -18,6 +18,7 @@ docker run --name back-office \
 Or you can also create a `docker-compose.yml` file:
 
 ```yaml
+name: back-office
 services:
   web:
     image: back-office.pro/back-office:latest

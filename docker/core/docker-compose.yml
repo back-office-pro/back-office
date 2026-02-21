@@ -1,3 +1,4 @@
+name: back-office
 services:
   clamav:
     image: clamav/clamav-debian:latest
