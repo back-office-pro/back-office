@@ -1,7 +1,7 @@
 name: back-office
 services:
   web:
-    image: back-office.pro/back-office:latest-full
+    image: backofficeapp/back-office:latest-full
     ports:
       - 3000:3000
     volumes:

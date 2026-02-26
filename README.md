@@ -12,7 +12,7 @@ docker run --name back-office \
            -v storage:/back-office/storage \ 
            -v credentials:/back-office/config/credentials \ 
            -v clamav:/var/lib/clamav \
-           back-office.pro/back-office:latest
+           backofficeapp/back-office:latest
 ```
 
 Or you can also create a `docker-compose.yml` file:
@@ -21,7 +21,7 @@ Or you can also create a `docker-compose.yml` file:
 name: back-office
 services:
   web:
-    image: back-office.pro/back-office:latest
+    image: backofficeapp/back-office:latest
     ports:
       - 3000:3000
     volumes:

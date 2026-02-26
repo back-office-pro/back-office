@@ -21,7 +21,7 @@ services:
     environment:
       - PORT=3333
   web:
-    image: back-office.pro/back-office:latest-core
+    image: backofficeapp/back-office:latest-core
     ports:
       - 3000:3000
     volumes:
