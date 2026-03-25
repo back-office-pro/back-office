@@ -7,10 +7,10 @@ Your back office is delivered in *on-premise* mode. This distribution method all
 The server installation takes place in a few minutes via [docker](https://www.docker.com/). You can use the following *docker* command to start immediately:
 
 ```shell
-docker run --name back-office \ 
-           -p 3000:3000 \ 
-           -v storage:/back-office/storage \ 
-           -v credentials:/back-office/config/credentials \ 
+docker run --name back-office \
+           -p 3000:3000 \
+           -v storage:/back-office/storage \
+           -v credentials:/back-office/config/credentials \
            -v clamav:/var/lib/clamav \
            backofficeapp/back-office:latest
 ```
